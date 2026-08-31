@@ -134,8 +134,8 @@ function MenuPage() {
 
       {/* Section nav */}
       <nav className="border-border bg-background/90 sticky top-0 z-40 border-b backdrop-blur-md">
-        <div className="mx-auto max-w-5xl overflow-x-auto px-4">
-          <ul className="flex min-w-max items-center gap-6 py-3 text-[0.68rem] tracking-[0.2em] whitespace-nowrap uppercase">
+        <div className="mx-auto max-w-5xl overflow-x-auto px-4 pr-24 sm:pr-28">
+          <ul className="flex min-w-max items-center gap-5 py-3 text-[0.68rem] tracking-[0.2em] whitespace-nowrap uppercase">
             {sections.map((s) => (
               <li key={s.id}>
                 <a
