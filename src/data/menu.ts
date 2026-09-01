@@ -294,6 +294,17 @@ export const sections: Section[] = [
     ],
   },
   {
+    id: "boissons",
+    fr: "Les Boissons",
+    en: "Drinks",
+    dishes: [
+      { fr: "1/2 Soda", en: "1/2 Soda", price: "28,00" },
+      { fr: "Soda", en: "Soda", price: "38,00" },
+      { fr: "Jus d'Orange", en: "Orange Juice", price: "32,00" },
+      { fr: "Sidi Ali 1/1", en: "Sidi Ali 1/1", price: "30,00" },
+    ],
+  },
+  {
     id: "desserts",
     fr: "Desserts",
     en: "Desserts",
