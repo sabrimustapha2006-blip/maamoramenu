@@ -30,7 +30,6 @@ export const Route = createFileRoute("/")({
 
 type Lang = "fr" | "en";
 
-const images: Record<string, string> = {};
 
 const ui = {
   fr: {
