@@ -2,13 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 import { sections, suggestionNote, garnishNote } from "@/data/menu";
-import heroImg from "@/assets/hero.jpg";
-import saladImg from "@/assets/salad.jpg";
-import beefImg from "@/assets/beef.jpg";
-import fishImg from "@/assets/fish.jpg";
-import pizzaImg from "@/assets/pizza.jpg";
-import tagineImg from "@/assets/tagine.jpg";
-import dessertImg from "@/assets/dessert.jpg";
+import heroAsset from "@/assets/hotel-mamora.jpg.asset.json";
+
+const heroImg = heroAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,14 +30,7 @@ export const Route = createFileRoute("/")({
 
 type Lang = "fr" | "en";
 
-const images: Record<string, string> = {
-  salad: saladImg,
-  beef: beefImg,
-  fish: fishImg,
-  pizza: pizzaImg,
-  tagine: tagineImg,
-  dessert: dessertImg,
-};
+const images: Record<string, string> = {};
 
 const ui = {
   fr: {
