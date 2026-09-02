@@ -2,13 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 import { sections, suggestionNote, garnishNote } from "@/data/menu";
-import heroImg from "@/assets/hero.jpg";
-import saladImg from "@/assets/salad.jpg";
-import beefImg from "@/assets/beef.jpg";
-import fishImg from "@/assets/fish.jpg";
-import pizzaImg from "@/assets/pizza.jpg";
-import tagineImg from "@/assets/tagine.jpg";
-import dessertImg from "@/assets/dessert.jpg";
+import heroAsset from "@/assets/hotel-mamora.jpg.asset.json";
+
+const heroImg = heroAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,14 +30,6 @@ export const Route = createFileRoute("/")({
 
 type Lang = "fr" | "en";
 
-const images: Record<string, string> = {
-  salad: saladImg,
-  beef: beefImg,
-  fish: fishImg,
-  pizza: pizzaImg,
-  tagine: tagineImg,
-  dessert: dessertImg,
-};
 
 const ui = {
   fr: {
@@ -153,19 +141,6 @@ function MenuPage() {
       <main className="mx-auto max-w-3xl px-5 py-16 sm:px-8 sm:py-24">
         {sections.map((section, i) => (
           <section key={section.id} id={section.id} className={i === 0 ? "" : "mt-20 sm:mt-28"}>
-            {section.image && (
-              <figure className="shadow-frame mb-10 overflow-hidden rounded-sm">
-                <img
-                  src={images[section.image]}
-                  alt={section[lang]}
-                  width={1200}
-                  height={800}
-                  loading="lazy"
-                  className="h-56 w-full object-cover sm:h-72"
-                />
-              </figure>
-            )}
-
             <div className="text-center">
               <h2 className="font-display text-4xl font-light tracking-wide sm:text-5xl">
                 {section[lang]}
